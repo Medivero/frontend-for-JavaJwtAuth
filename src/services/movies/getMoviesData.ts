@@ -1,4 +1,4 @@
-import { ApiURL } from "./apisStore";
+import { ApiURL } from "../apisStore";
 
 async function GetMoviesData(){
     const res = await fetch(ApiURL+"/movie/getAllMovies",{
