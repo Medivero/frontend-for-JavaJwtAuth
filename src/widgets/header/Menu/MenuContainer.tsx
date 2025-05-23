@@ -8,7 +8,7 @@ function MenuContainer(){
     },[stateOfMenu])
     return (
         <>
-        <div className="z-5">
+        <div className="z-10 relative">
             <div style={{transform: `translateX(${stateOfMenu ? "0" : "-100"}%)`}} className={`fixed duration-700 top-0 transition-all bg-gray-800 w-[400px] h-screen`}>
                 <div className="flex flex-col mt-[100px] px-[40px] text-[26px]">
                     <a href="/">FILMFINDER</a>

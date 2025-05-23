@@ -1,12 +1,12 @@
 export interface Movie{
-    id: any,
-    name: String,
-    rating: Number,
-    description: String,
-    imagelink: String,
+    id: never,
+    name: string,
+    rating: number,
+    description: string,
+    imagelink: string,
     authors: Author[]
 }
 
 export interface Author{
-    name: String
+    name: string
 }

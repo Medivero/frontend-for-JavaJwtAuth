@@ -8,7 +8,9 @@ function MoviePage(){
     const {id} = useParams();
     const [MovieData,setMovieData] = useState<Movie>()
     useEffect(() => {
-        getMovie(id).then((data) => setMovieData(data))
+        getMovie(id).then((data) => setMovieData(data)).then(() => {
+            console.log(MovieData)
+        })
     },[])
     return (
         <>
@@ -21,8 +23,12 @@ function MoviePage(){
                         <span className="text-[64px] font-serif font-bold mix-blend-difference">{MovieData?.name}</span>
                     </div>
                 </div>
-                <div className="w-[70%] px-[20px]">
-                    <span>{MovieData?.description}</span>
+                <div className=" px-[20px] flex flex-col mt-[20px]">
+                    <div className="flex flex-col w-full ">
+                        <span className="text-[64px] rounded-[20px] border p-[20px]">Description</span>
+                        <span className="text-[35px]">{MovieData?.description}</span>
+                    </div>
+                    <span>Rating: {MovieData?.rating}</span>
                 </div>
             </div>
         </>
